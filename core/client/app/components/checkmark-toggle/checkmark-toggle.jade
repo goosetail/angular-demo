@@ -1,0 +1,6 @@
+.checkmark-toggle(ng-click="toggle()")
+	.toggle
+		i.fa.fa-square-o(ng-if="!toggled")
+		i.fa.fa-check-square-o(ng-if="toggled")
+	.toggle-content
+		div(ng-transclude)

@@ -1,0 +1,12 @@
+#todo
+
+	.back.fa.fa-arrow-left(ui-sref="index")
+
+	h2 {{list.name}}
+
+	ul.list
+		li.component(todo-item, ng-repeat = "item in list.items", item = "item")
+
+	.add-item
+		input(ng-model="newItem.task")
+		button.btn-primary(ng-click="addItem(newItem)") Add Item

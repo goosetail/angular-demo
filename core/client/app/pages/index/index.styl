@@ -1,0 +1,53 @@
+@require '../../common/mixins.styl';
+@require 'nib';
+
+#index
+	height 100%
+	position relative
+
+	#menu
+		absolute top 20px left 0
+		text-align right
+
+		.todo-list
+			display block
+			width 120px
+			height 30px
+			padding-right 15px
+			line-height 30px
+			background-color angular-dark-red
+			box-shadow 1px 2px 7px #333
+			cursor pointer
+			color #e7e7e7
+			text-shadow 0 1px 1px #777
+
+			&:hover
+				background-color angular-red
+
+	#logo-wrap
+		width 70%
+		height 70%
+		margin 0 auto
+		padding-bottom 40px
+		margin-bottom 20px
+		border-bottom 1px solid #efefef
+
+
+	#logo
+		width 100%
+		height 100%
+		margin 0 auto 20px auto
+		background url('/app/lib/images/GoosetailLabs-Logo.png') no-repeat center center;
+		background-size contain
+
+
+	#angular-logo
+		width 30%
+		height 20%
+		margin 0 auto
+		background url('/app/lib/images/AngularJs-Logo.png') no-repeat center center;
+		background-size contain
+
+
+
+
