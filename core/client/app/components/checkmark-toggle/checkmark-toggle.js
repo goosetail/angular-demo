@@ -2,13 +2,22 @@ APP_MODULE
 	.directive('checkmarkToggle', function () {
 		return {
 			transclude: true,
-			scope: { },
+			controller: 'CheckmarkToggleCtrl',
+			scope: {
+				toggled: '='
+			},
 			templateUrl: "/app/components/checkmark-toggle/checkmark-toggle.html",
-			link: function(scope, elem, attrs) {
+			link: function (scope, elem, attrs) {
 
-				scope.toggle = function(){
-					scope.toggled = !scope.toggled
-				}
+
 			}
 		}
-	});
+	})
+	.controller('CheckmarkToggleCtrl', [
+	    '$scope',
+	    function ($scope) {
+		    $scope.toggle = function () {
+			    $scope.toggled = !$scope.toggled;
+		    }
+	    }
+	]);

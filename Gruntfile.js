@@ -32,7 +32,8 @@ module.exports = function(grunt) {
 					'core/.build/app/gen.min.js': [
 						'core/client/app/**/*.js',
 						'!core/client/app/index.js',
-						'!core/client/app/lib/**/*.js'
+						'!core/client/app/lib/**/*.js',
+						'!core/client/app/**/*-spec.js'
 					],
 					'core/.build/app/lib.min.js': [
 						'core/client/app/lib/**/*.js',

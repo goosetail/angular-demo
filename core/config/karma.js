@@ -6,7 +6,6 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../../',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha'],
@@ -17,31 +16,37 @@ module.exports = function(config) {
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js',
       'node_modules/chai/chai.js',
       'core/config/karma-globals.js',
+      'core/client/app/lib/js/*.js',
       'core/client/app/index.js',
       'core/client/**/*.js',
-      'core/client/**/*-spec.js'
+      'core/client/app/**/*.jade'
     ],
 
     // list of files to exclude
     exclude: [
     ],
 
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.jade': ['ng-jade2js']
     },
 
+    ngJade2JsPreprocessor: {
+
+      // strip this from the file path
+      stripPrefix: 'core/client',
+
+      //create single module to load all templates in
+      moduleName: 'templates'
+
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['dots'],
-
+    reporters: ['progress'],
 
     // web server port
     port: 9876,
-
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,

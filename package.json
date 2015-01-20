@@ -5,7 +5,8 @@
   "scripts": {
     "start": "./bin/start",
     "karma": "./bin/karma",
-    "build": "grunt build"
+    "build": "grunt build",
+    "deploy-prod": "./bin/deploy-prod"
   },
   "dependencies": {
     "async": "0.9.x",
@@ -44,6 +45,7 @@
     "karma-chai": "~0.1",
     "karma-chrome-launcher": "~0.1",
     "karma-mocha": "~0.1",
+    "karma-ng-jade2js-preprocessor": "~0.2",
     "mocha": "~1",
     "supertest": "~0.15"
   },

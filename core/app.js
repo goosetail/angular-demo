@@ -28,7 +28,8 @@ assetWorker.setOptions({
 	buildDir: buildDir,
 	resourceRoot: nconf.get( 'app:resourceRoot' ),
 	optimized: nconf.get( 'app:optimized' ),
-	appVersion: pkg.version
+	appVersion: pkg.version,
+	exclude: '*-spec.js'
 });
 
 // set app variables
