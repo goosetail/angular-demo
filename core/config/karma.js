@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../',
+    basePath: '../../',
 
 
     // frameworks to use
@@ -16,10 +16,10 @@ module.exports = function(config) {
     files: [
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js',
       'node_modules/chai/chai.js',
-      'test/client/utils/configure.js',
+      'core/config/karma-globals.js',
       'core/client/app/index.js',
       'core/client/**/*.js',
-      'test/client/**/*.js'
+      'core/client/**/*-spec.js'
     ],
 
     // list of files to exclude
@@ -36,7 +36,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['dots'],
 
 
     // web server port
