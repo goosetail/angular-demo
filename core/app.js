@@ -5,13 +5,11 @@ var path = require('path');
 var async = require('async');
 var logger = require('morgan');
 var nconf = require('nconf');
-var mongoose = require('mongoose');
 var assetWorker = require('asset-worker');
 var mongooseConnect = require('./lib/mongooseConnect');
 var utils = require('./lib/utils');
 var rpc = require('./lib/rpc');
 var fling = require('fling');
-var models = require('./models');
 var favicon = require('serve-favicon');
 
 var app = module.exports = express();
@@ -47,13 +45,9 @@ var tasks = {
 	// initialize all the data models
 	initDatabase: function(next) {
 		mongooseConnect.connect(nconf.get('database:url'), function(err) {
-
 			if (err) {
 				return next(err);
 			}
-
-			// instantiate  models
-			models.init(mongoose.connection);
 			setImmediate(next);
 		});
 	},
