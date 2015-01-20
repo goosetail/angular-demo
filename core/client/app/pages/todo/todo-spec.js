@@ -1,7 +1,9 @@
 describe('TodoCtrl', function() {
 	beforeEach(module('angular-demo'));
 
-	var $controller;
+	var $scope;
+	var $ctrl;
+
 	var list = {
 		name: 'To-Do List',
 		items:[{
@@ -11,15 +13,14 @@ describe('TodoCtrl', function() {
 	};
 
 	beforeEach(inject(function(_$controller_){
+		$scope = {};
 		// The injector unwraps the underscores (_) from around the parameter names when matching
-		$controller = _$controller_;
+		$ctrl = _$controller_('TodoCtrl', { $scope: $scope, list: list });
+
 	}));
 
 	describe('.addItem()', function () {
 		it('should add a new item to the list', function(){
-
-			var $scope = {};
-			$controller('TodoCtrl', { $scope: $scope, list: list });
 
 			$scope.list = list;
 
