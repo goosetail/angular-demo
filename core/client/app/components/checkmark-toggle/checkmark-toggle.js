@@ -9,7 +9,6 @@ APP_MODULE
 			templateUrl: "/app/components/checkmark-toggle/checkmark-toggle.html",
 			link: function (scope, elem, attrs) {
 
-
 			}
 		}
 	})
