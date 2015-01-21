@@ -22,12 +22,12 @@ describe('To-Do list page', function() {
 		element.all(by.repeater('item in list.items')).then(function(items) {
 			count = items.length;
 
-			$('.add-item input').sendKeys('Another To-Do Item');
+			$('.add-item input').sendKeys('Another To-Do Item!');
 
 			$('.add-item button').click();
 
 			expect(element.all(by.className('todo-item')).count()).toEqual(count +1);
-			
+
 		});
 
 	});
