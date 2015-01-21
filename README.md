@@ -2,6 +2,23 @@
 
 An Angular demo app for demonstrating folder structure, unit-testing, automated builds, and 3rd party components
 
+## Running the app
+
+Clone the repo
+
+ssh: `$ git clone git@github.com:goosetail/angular-demo.git`
+
+https: `https://github.com/goosetail/angular-demo.git`
+
+and run the following commands from the project root:
+
+`npm install;`
+
+`npm start;`
+
+
+That's it! Now point your browser to [http://localhost:3000](http://localhost:3000) to make sure things are working properly.
+
 
 ## Unit and End-to-End Testing
 
@@ -28,8 +45,8 @@ and can be ran with `npm run protractor`
 
 Notes:
 
-* We are running the test directly in Chrome instead of using Selenium. If we needs support for browsers other than
-    FF and Chrome, then this will need to change.
+* We are running the test directly in Chrome instead of using Selenium. If we need support for browsers other than
+FF and Chrome, then this will need to change.
 
 ## 3rd-party directives
 The map page uses [angular-google-maps](http://angular-ui.github.io/angular-google-maps/#!/), which is a directive for
