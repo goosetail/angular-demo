@@ -15,7 +15,7 @@ module.exports = function(config) {
     files: [
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js',
       'node_modules/chai/chai.js',
-      'core/config/karma-globals.js',
+      'core/config/karma.globals.js',
       'core/client/app/lib/js/*.js',
       'core/client/app/index.js',
       'core/client/**/*.js',
