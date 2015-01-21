@@ -23,8 +23,7 @@ module.exports = function(config) {
     ],
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     preprocessors: {
       '**/*.jade': ['ng-jade2js']
