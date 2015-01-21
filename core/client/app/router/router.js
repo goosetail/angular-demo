@@ -21,6 +21,11 @@ APP_MODULE
 							return API.getTodoList();
 						}]
 					}
+				})
+				.state('map', {
+					url: '/map',
+					templateUrl: '/app/pages/map/map.html',
+					controller: 'MapCtrl'
 				});
 		}
 	]);

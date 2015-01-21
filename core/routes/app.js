@@ -31,7 +31,8 @@ module.exports = function(router) {
 
 	var appRoutes = [
 		'/',
-		'/todo'
+		'/todo',
+		'/map'
 	];
 
 	_.each(appRoutes, function(route) {

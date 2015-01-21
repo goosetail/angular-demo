@@ -2,13 +2,20 @@ var APP_MODULE = angular.module('angular-demo', [
 	'ui.router',
 	'templates-app',
 	'angular-util',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'uiGmapgoogle-maps'
 	])
 
 	.constant('Config', {
 		debug: true
 	})
-
+	.config(function(uiGmapGoogleMapApiProvider) {
+		uiGmapGoogleMapApiProvider.configure({
+			key: 'AIzaSyA9X85xeouFCSM6FA3I3YWJUkVmZ2jmjWc',
+			v: '3.17',
+			libraries: 'weather,geometry,visualization'
+		});
+	})
 	.run([
 		'$rootScope',
 		'Util',
