@@ -9,11 +9,14 @@ APP_MODULE
 			$scope.list = list;
 
 			$scope.addItem = function(newItem){
-				if(!newItem) { return; }
 
-				$scope.list.items.push(newItem);
+				if (!$scope.newItem) {
+					alert('You must provide a value for new item.');
+					return;
+				}
 
-				$scope.newItem = null;
+				$scope.list.items.push($scope.newItem);
+				$scope.newItem = '';
 			}
 		}
 	]);

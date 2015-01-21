@@ -23,10 +23,9 @@ describe('TodoCtrl', function() {
 		it('should add a new item to the list', function(){
 
 			$scope.list = list;
+			$scope.newItem = {task: 'Second Task'};
 
-			var newItem = {task: 'Second Task'};
-
-			$scope.addItem(newItem);
+			$scope.addItem($scope.newItem);
 
 			expect($scope.list.items.length).to.equal(2);
 		})

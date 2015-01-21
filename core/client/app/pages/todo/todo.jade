@@ -8,5 +8,6 @@
 		li.component(todo-item, ng-repeat = "item in list.items", item = "item")
 
 	.add-item
+		label Enter new item:&nbsp;
 		input(ng-model="newItem.task")
-		button.btn-primary(ng-click="addItem(newItem)") Add Item
+		button.btn-primary(ng-click="addItem()") Add Item
