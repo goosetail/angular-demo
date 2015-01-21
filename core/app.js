@@ -29,7 +29,7 @@ assetWorker.setOptions({
 	resourceRoot: nconf.get( 'app:resourceRoot' ),
 	optimized: nconf.get( 'app:optimized' ),
 	appVersion: pkg.version,
-	exclude: null
+	exclude: '*-spec.js'
 });
 
 // set app variables
