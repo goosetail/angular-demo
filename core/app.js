@@ -16,6 +16,8 @@ var app = module.exports = express();
 // load config
 nconf.file('default', __dirname + '/config/default.json');
 
+console.log(app.get( 'env' ))
+
 nconf.set('appName', pkg.name);
 
 // init assets
