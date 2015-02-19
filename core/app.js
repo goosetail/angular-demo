@@ -14,9 +14,8 @@ var favicon = require('serve-favicon');
 var app = module.exports = express();
 
 // load config
+nconf.file('environment', __dirname + '/config/' + app.get( 'env' ) + '.json');
 nconf.file('default', __dirname + '/config/default.json');
-
-console.log(app.get( 'env' ))
 
 nconf.set('appName', pkg.name);
 
