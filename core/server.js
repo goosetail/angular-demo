@@ -26,11 +26,6 @@ else {
 
 	app.listen(nconf.get('server:port'), function() {
 
-		// for production we want to switch to dummy user
-		if ('development' !== app.get('env')) {
-			process.setgid(appName);
-			process.setuid(appName);
-		}
 	});
 }
 
